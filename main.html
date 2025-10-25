@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Grid Layout</title>
-  <!-- Bootstrap CSS (v5) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 5px;
+      background: white;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(4, 246.25px); /* fixed width */
+      grid-template-rows: repeat(5, 124px);
+      gap: 5px;
+    }
+
+    #grid > div {
+      background-color: green;
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding: 10px;
+    }
+
+   #grid > div:nth-child(1){
+	grid-column:span 4;
+	grid-row:1;
+	
+}
+
+#grid > div:nth-child(2){
+	grid-column:1;
+	grid-row:2/span 4;
+}
+
+#grid > div:nth-child(3){
+	grid-column:2;
+	grid-row:2;
+}
+
+#grid > div:nth-child(4){
+	grid-column:3/span 2;
+	grid-row:2;
+}
+
+#grid > div:nth-child(5){
+	grid-column:2/span 2;
+	grid-row:3;
+}
+
+#grid > div:nth-child(6){
+	grid-column:4;
+	grid-row:3;
+}
+
+#grid > div:nth-child(7){
+grid-column:2;
+	grid-row:4;
+}
+
+#grid > div:nth-child(8){
+	grid-column:3;
+	grid-row:4;ac
+}
+
+#grid > div:nth-child(9){
+	grid-column:4;
+	grid-row:4;
+}
+
+#grid > div:nth-child(10){
+	grid-column:2/span 3;
+	grid-row:5;
+}
+  </style>
 </head>
 <body>
-
-  <div class="container" style="max-width:600px; border:5px solid rgb(4,255,4); background-color:rgb(41,0,0);">
-
-    <!-- Row 1 -->
-    <div class="row" style="border:5px solid rgb(255,188,188); height:200px;">
-      <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:teal; border:2px dotted rgb(38,38,43);">
-        Row1 col1
-      </div>
-      <div class="col-md-8 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:thistle; border:2px dotted rgb(38,38,43);">
-        Row1 col2
-      </div>
+   <div id="grid">https://d3dyfaf3iutrxo.cloudfront.net/thumbnail/assignment/question/5f34894829fc4117b4f4b4325aba85e7.JPG
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
     </div>
-
-    <!-- Row 2 -->
-    <div class="row" style="border:5px solid rgb(255,188,188); height:200px;">
-      <div class="col-md-4 offset-md-2 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:tomato; border:2px dotted rgb(38,38,43);">
-        Row2 col1
-      </div>
-      <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:turquoise; border:2px dotted rgb(38,38,43);">
-        Row2 col2
-      </div>
-    </div>
-
-    <!-- Row 3 -->
-    <div class="row justify-content-center" style="border:5px solid rgb(255,188,188); height:200px;">
-      <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:violet; border:2px dotted rgb(38,38,43);">
-        Row3 col1
-      </div>
-      <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center"
-           style="background-color:yellowgreen; border:2px dotted rgb(38,38,43);">
-        Row3 col2
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
